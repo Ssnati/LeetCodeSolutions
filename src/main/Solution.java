@@ -5,6 +5,7 @@ import classes.ListNode;
 import java.util.*;
 
 public class Solution {
+    //Problem 1
     public int[] twoSum(int[] nums, int target) {
         List<int[]> couples = new ArrayList<>();
         if (Arrays.stream(nums).noneMatch(i -> i < 0)) {
@@ -29,6 +30,7 @@ public class Solution {
         return nums;
     }
 
+    //Problem 2
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
         ListNode result = null;
@@ -55,4 +57,6 @@ public class Solution {
         }
         return current;
     }
+
+    //Problem 3
 }
