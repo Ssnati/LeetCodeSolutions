@@ -59,4 +59,23 @@ public class Solution {
     }
 
     //Problem 3
+    public int lengthOfLongestSubstring(String s) {
+        int maxlength = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c1 = s.charAt(i);
+            int maxTemp = 1;
+            for (int j = i + 1; j < s.length(); j++) {
+                char c2 = s.charAt(j);
+                if (c1 == c2) {
+                    break;
+                }
+                maxTemp++;
+            }
+            if (maxTemp > maxlength) {
+                maxlength = maxTemp;
+            }
+        }
+//        System.out.println(frequency);
+        return maxlength;
+    }
 }
